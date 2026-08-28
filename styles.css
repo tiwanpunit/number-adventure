@@ -2,3 +2,28 @@
 
 /* V2 continuous runner */
 .game-area::after{content:"";position:absolute;left:0;right:0;bottom:8%;height:9%;z-index:4;pointer-events:none;background-image:radial-gradient(circle at 15px 20px,#fff 0 4px,#f7c948 5px 7px,transparent 8px),radial-gradient(circle at 80px 36px,#fff 0 4px,#f7c948 5px 7px,transparent 8px);background-size:130px 58px;background-position:var(--world-shift,0px) 0;opacity:.75}.game-area.is-running::after{animation:runner-ground .65s linear infinite}.game-area.is-running .mountains{animation:mountain-drift 7s linear infinite}.game-area.is-running .player-wrap{animation:run-bob .32s ease-in-out infinite alternate}.world-object{position:absolute;left:0;bottom:20%;z-index:9;will-change:transform}.world-star{font-size:62px;bottom:31%;filter:drop-shadow(0 5px 2px rgba(0,0,0,.12));animation:float 1.1s ease-in-out infinite}.world-rock{font-size:76px;bottom:20%}.world-gate{bottom:17%;width:180px;height:230px}.world-zero{bottom:17%;width:180px}.world-object.collected{opacity:0;transition:opacity .18s ease}.meet-zero{display:flex;align-items:flex-end;gap:10px}.hello-zero{background:white;border:3px solid var(--ink);border-radius:16px;padding:8px 10px;font-weight:900;margin-bottom:80px;white-space:nowrap}.shake{animation:shake .28s linear 2}@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}@keyframes run-bob{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-7px) rotate(1deg)}}@keyframes runner-ground{to{background-position:calc(var(--world-shift,0px) - 130px) 0}}@keyframes mountain-drift{to{transform:translateX(-20px)}}
+
+/* The wrapper owns the jump while its child owns the running stride. Keeping
+   those transforms separate prevents the running animation from hiding jumps. */
+.game-area.is-running .player-wrap{animation:none}
+.game-area.is-running #player{animation:run-bob .3s ease-in-out infinite alternate;transform-origin:center bottom}
+.game-area.is-running .nb .leg.l{animation:run-leg-left .3s ease-in-out infinite alternate;transform-origin:50% 0}
+.game-area.is-running .nb .leg.r{animation:run-leg-right .3s ease-in-out infinite alternate;transform-origin:50% 0}
+.game-area.is-running .nb .foot.l{animation:run-foot-left .3s ease-in-out infinite alternate;transform-origin:right center}
+.game-area.is-running .nb .foot.r{animation:run-foot-right .3s ease-in-out infinite alternate;transform-origin:left center}
+.player-wrap.jump{animation:jump .75s cubic-bezier(.2,.72,.35,1)!important}
+.game-area.is-running .c1{animation:cloud-run 8s linear infinite}
+.game-area.is-running .c2{animation:cloud-run 11s linear infinite reverse}
+@keyframes run-leg-left{from{transform:rotate(25deg)}to{transform:rotate(-25deg)}}
+@keyframes run-leg-right{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
+@keyframes run-foot-left{from{transform:translateX(3px) rotate(12deg)}to{transform:translateX(-5px) rotate(-12deg)}}
+@keyframes run-foot-right{from{transform:translateX(-3px) rotate(-12deg)}to{transform:translateX(5px) rotate(12deg)}}
+@keyframes cloud-run{from{translate:12vw 0}to{translate:-70vw 0}}
+.world-star{animation:none}
+.world-star span{display:block;animation:float 1.1s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){
+  .game-area.is-running #player{animation-duration:.3s!important;animation-iteration-count:infinite!important}
+  .game-area.is-running .nb .leg,.game-area.is-running .nb .foot{animation-duration:.3s!important;animation-iteration-count:infinite!important}
+  .player-wrap.jump{animation-duration:.75s!important;animation-iteration-count:1!important}
+  .world-star span{animation-duration:1.1s!important;animation-iteration-count:infinite!important}
+}

@@ -85,7 +85,7 @@
       const el=document.createElement('div');
       el.className=`world-object world-${e.type}`;
       el.dataset.index=i;
-      if(e.type==='star') el.innerHTML='⭐';
+      if(e.type==='star') el.innerHTML='<span aria-hidden="true">⭐</span>';
       if(e.type==='rock') el.innerHTML='🪨';
       if(e.type==='gate') el.innerHTML=`<div class="gate"><div class="gate-sign">${e.label}</div></div>`;
       if(e.type==='zero') el.innerHTML=`<div class="meet-zero">${zeroHTML()}<div class="hello-zero">Hi One!</div></div>`;
@@ -187,7 +187,7 @@
     jumping=true;
     playerWrap.classList.remove('jump'); void playerWrap.offsetWidth; playerWrap.classList.add('jump');
     speak('Jump!');
-    setTimeout(()=>{ jumping=false; },700);
+    setTimeout(()=>{ jumping=false; playerWrap.classList.remove('jump'); },750);
     if(obstacleHit){
       obstacleHit=false; jumpBtn.disabled=true; goBtn.disabled=false; goBtn.textContent='Keep Running ➜';
       bubble('Great! Now run past the rock!',false);
@@ -228,6 +228,9 @@
   $('#parentBtn').addEventListener('click',()=>show('parentScreen'));
   $('#parentBackBtn').addEventListener('click',()=>show('homeScreen'));
   window.addEventListener('resize',()=>{ if($('#gameScreen').classList.contains('active')) renderWorld(); });
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden && running && !paused) pauseRun();
+  });
 
   if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 })();
