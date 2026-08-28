@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-title" content="Number Adventure" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=10" />
   <title>Number Adventure</title>
 </head>
 <body>
@@ -18,21 +18,32 @@
       <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
       <div class="title-card">
         <div class="mini-heroes" aria-hidden="true">
-          <div class="nb zero mini"><span>0</span></div>
-          <div class="nb one mini"><div class="face">1</div></div>
+          <div id="homeZero" class="home-hero home-zero"></div>
+          <div id="homeOne" class="home-hero home-one"></div>
         </div>
         <h1>Number Adventure</h1>
         <p>Zero &amp; One's Number Garden</p>
-        <button id="playBtn" class="primary big">▶ Play</button>
+        <button id="playBtn" class="primary big">▶ Continue</button>
+        <button id="chooseStagesBtn" class="secondary stage-choice">Choose Stage</button>
         <button id="parentBtn" class="secondary">Parent Corner</button>
       </div>
       <div class="hill hill-back"></div><div class="hill hill-front"></div>
     </section>
 
+    <section id="stageScreen" class="screen stage-screen">
+      <div class="stage-card-shell">
+        <div class="stage-heading">
+          <button id="stageBackBtn" class="icon-btn" aria-label="Back to home">←</button>
+          <div><h2>Choose an Adventure</h2><p id="stageProgressText">Stage 1 is ready!</p></div>
+        </div>
+        <div id="stageGrid" class="stage-grid"></div>
+      </div>
+    </section>
+
     <section id="gameScreen" class="screen game-screen">
       <header class="hud">
         <button id="homeBtn" class="icon-btn" aria-label="Back to home">⌂</button>
-        <div class="world-label"><strong>World 1</strong><span>Zero &amp; One's Number Garden</span></div>
+        <div class="world-label"><strong id="stageLabel">Stage 1</strong><span id="worldName">Zero &amp; One's Number Garden</span><div class="progress-track" aria-hidden="true"><i id="progressFill"></i></div></div>
         <div class="hud-stat"><span>⭐</span><b id="starCount">0</b></div>
       </header>
 
@@ -70,7 +81,9 @@
         <h2>Amazing!</h2>
         <p id="finishText">You finished the Number Garden!</p>
         <div class="result-stars">⭐ ⭐ ⭐</div>
-        <button id="againBtn" class="primary big">Play Again</button>
+        <button id="nextStageBtn" class="primary big">Next Stage</button>
+        <button id="againBtn" class="secondary">Play Again</button>
+        <button id="celebrationStagesBtn" class="secondary">Choose Stage</button>
         <button id="celebrateHomeBtn" class="secondary">Home</button>
       </div>
     </section>
@@ -89,6 +102,6 @@
       </div>
     </section>
   </main>
-  <script src="game.js"></script>
+  <script src="game.js?v=10"></script>
 </body>
 </html>
