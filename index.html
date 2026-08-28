@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#62c7ff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Number Adventure" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Number Adventure</title>
+</head>
+<body>
+  <main id="app" aria-label="Number Adventure game">
+    <section id="homeScreen" class="screen home-screen active">
+      <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+      <div class="title-card">
+        <div class="mini-heroes" aria-hidden="true">
+          <div class="nb zero mini"><span>0</span></div>
+          <div class="nb one mini"><div class="face">1</div></div>
+        </div>
+        <h1>Number Adventure</h1>
+        <p>Zero &amp; One's Number Garden</p>
+        <button id="playBtn" class="primary big">▶ Play</button>
+        <button id="parentBtn" class="secondary">Parent Corner</button>
+      </div>
+      <div class="hill hill-back"></div><div class="hill hill-front"></div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen">
+      <header class="hud">
+        <button id="homeBtn" class="icon-btn" aria-label="Back to home">⌂</button>
+        <div class="world-label"><strong>World 1</strong><span>Zero &amp; One's Number Garden</span></div>
+        <div class="hud-stat"><span>⭐</span><b id="starCount">0</b></div>
+      </header>
+
+      <div id="gameArea" class="game-area" tabindex="0">
+        <div class="sky">
+          <div class="sun"></div>
+          <div class="cloud c1"></div><div class="cloud c2"></div>
+        </div>
+        <div class="mountains"></div>
+        <div class="ground"></div>
+        <div class="path"></div>
+        <div id="sceneObjects" class="scene-objects"></div>
+        <div id="playerWrap" class="player-wrap" aria-label="Numberblock One">
+          <div id="player"></div>
+        </div>
+        <div id="companion" class="companion hidden" aria-hidden="true"></div>
+        <div id="speechBubble" class="speech-bubble hidden" aria-live="polite"></div>
+      </div>
+
+      <section id="challengePanel" class="challenge-panel hidden" aria-live="polite">
+        <div id="challengePrompt" class="challenge-prompt"></div>
+        <div id="answerButtons" class="answer-buttons"></div>
+      </section>
+
+      <div class="controls">
+        <button id="jumpBtn" class="control-btn jump">⬆ Jump</button>
+        <button id="goBtn" class="control-btn go">Go ➜</button>
+      </div>
+    </section>
+
+    <section id="celebrationScreen" class="screen celebration-screen">
+      <div class="confetti" aria-hidden="true"></div>
+      <div class="celebration-card">
+        <div id="finishHero" class="finish-hero"></div>
+        <h2>Amazing!</h2>
+        <p id="finishText">You finished the Number Garden!</p>
+        <div class="result-stars">⭐ ⭐ ⭐</div>
+        <button id="againBtn" class="primary big">Play Again</button>
+        <button id="celebrateHomeBtn" class="secondary">Home</button>
+      </div>
+    </section>
+
+    <section id="parentScreen" class="screen parent-screen">
+      <div class="parent-card">
+        <button id="parentBackBtn" class="icon-btn">←</button>
+        <h2>Parent Corner</h2>
+        <p>This private prototype is designed for short, ad-free play sessions.</p>
+        <div class="setting-row"><span>Spoken prompts</span><label class="switch"><input id="voiceToggle" type="checkbox" checked><span></span></label></div>
+        <div class="setting-row"><span>Auto difficulty</span><label class="switch"><input id="difficultyToggle" type="checkbox" checked><span></span></label></div>
+        <div class="parent-note">
+          <strong>World 1 learning range</strong>
+          <p>Numbers 0–10, joining, taking away, making zero, and making ten.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
