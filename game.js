@@ -44,58 +44,58 @@
       star(4380),obstacle(4740,'puddle'),
       {x:5280,type:'build',target:20,pieces:[10,8,6,5,4,2],allowMultipleSolutions:true,title:'Factory Finale',prompt:'🧱 → 20',to:20,msg:'The whole Numberblock Factory is shining!',finish:true,finale:true}
     ]},
-    {name:"Blockzilla's Bigger-Better Mountain",short:'Bigger-Better Mountain',range:'6–20',start:8,theme:'mountain',intro:'Blockzilla is waiting high on the comparison mountain!',encounters:[
+    {name:"Blockzilla's Bigger-Better Mountain",short:'Bigger-Better Mountain',range:'6–20',start:13,theme:'mountain',intro:'Blockzilla is waiting high on the comparison mountain!',encounters:[
       star(340),obstacle(680),{x:1080,type:'compare',left:8,right:6,question:'bigger',title:'Bigger Boulder',prompt:'Choose bigger',msg:'Eight is bigger than Six!'},
       obstacle(1450,'log'),star(1760),{x:2160,type:'compare',left:12,right:15,question:'smaller',title:'Little Ledge',prompt:'Choose smaller',msg:'Twelve is smaller than Fifteen!'},
       obstacle(2520,'puddle'),{x:2920,type:'compare',left:18,right:16,question:'bigger',title:'Blockzilla Roars',prompt:'Choose bigger',msg:'Eighteen is bigger than Sixteen!'},
       star(3280),obstacle(3620),{x:4020,type:'compare',left:9,right:14,question:'smaller',title:'Cloudy Climb',prompt:'Choose smaller',msg:'Nine is smaller than Fourteen!'},
       obstacle(4380,'log'),star(4720),{x:5200,type:'compare',left:20,right:20,question:'equal',title:'Mountain Top',prompt:'= ?',msg:'Yes! Twenty equals Twenty!',finish:true,finale:true}
     ]},
-    {name:'Missing Number Caves',short:'Missing Number Caves',range:'5–20',start:7,theme:'caves',intro:'Some numbers are hiding inside the sparkling caves!',encounters:[
+    {name:'Missing Number Caves',short:'Missing Number Caves',range:'5–20',start:14,theme:'caves',intro:'Some numbers are hiding inside the sparkling caves!',encounters:[
       star(320),obstacle(660,'puddle'),{x:1080,type:'missing',expression:'7 + ? = 12',choices:[3,4,5,6],correct:5,to:12,title:'Crystal Cave',prompt:'7 + ? = 12',msg:'Five was hiding there!'},
       obstacle(1460),star(1780),{x:2200,type:'missing',expression:'? + 8 = 15',choices:[5,6,7,9],correct:7,to:15,title:'Echo Cave',prompt:'? + 8 = 15',msg:'Seven plus Eight makes Fifteen!'},
       obstacle(2580,'log'),star(2920),{x:3340,type:'missing',expression:'18 − ? = 10',choices:[6,7,8,9],correct:8,to:10,title:'Moon Cave',prompt:'18 − ? = 10',msg:'Eighteen take away Eight leaves Ten!'},
       obstacle(3720,'puddle'),obstacle(4100),{x:4620,type:'missing',expression:'? + ? = 20',choices:[5,7,8,10,10,12,13,15],total:20,to:20,title:'Twin Crystal Finale',prompt:'? + ? = 20',msg:'Two hidden partners made Twenty!',finish:true,finale:true}
     ]},
-    {name:"Ten's Treasure Temple",short:'Treasure Temple',range:'10–50',start:10,theme:'temple',intro:'Collect number treasures and unlock the great vault!',encounters:[
+    {name:"Ten's Treasure Temple",short:'Treasure Temple',range:'10–50',start:15,theme:'temple',intro:'Collect number treasures and unlock the great vault!',encounters:[
       {x:300,type:'collect',value:5},obstacle(650,'log'),star(900),{x:1260,type:'path',current:10,target:30,paths:[{label:'+20',result:30},{label:'+10',result:20},{label:'−5',result:5}],to:30,title:'Door of Thirty',prompt:'10 → 30 ?',msg:'Thirty opens the sun door!'},
       obstacle(1660),{x:1940,type:'collect',value:10},obstacle(2260,'puddle'),{x:2700,type:'missing',expression:'30 + ? = 40',choices:[5,8,10,15],correct:10,to:40,title:'Golden Stair',prompt:'30 + ? = 40',msg:'Ten more makes Forty!'},
       star(3060),obstacle(3400,'log'),{x:3820,type:'path',current:30,target:40,paths:[{label:'+5',result:35},{label:'+10',result:40},{label:'+20',result:50}],to:40,title:'Door of Forty',prompt:'30 → 40 ?',msg:'Forty lights the treasure hall!'},
       {x:4200,type:'collect',value:20},obstacle(4540),{x:4960,type:'order',numbers:[40,10,30,20],direction:'up',title:'Treasure Key Bridge',prompt:'10 < ? < ? < 40',msg:'Ten, Twenty, Thirty, Forty—the key bridge is complete!'},obstacle(5320,'log'),{x:5900,type:'build',target:50,pieces:[30,25,20,15,10,5],allowMultipleSolutions:true,to:50,title:'Treasure Vault Finale',prompt:'🧱 → 50',msg:'Fifty! The treasure vault is open!',finish:true,finale:true}
     ]},
-    {name:"Two's Double Trouble",short:'Double Trouble',range:'1–32',start:2,theme:'mirror',intro:'Magic mirrors make two of every Numberblock!',encounters:[
+    {name:"Two's Double Trouble",short:'Double Trouble',range:'1–32',start:16,theme:'mirror',intro:'Magic mirrors make two of every Numberblock!',encounters:[
       star(320),obstacle(660),{x:1080,type:'mirror',start:2,steps:[4],title:'First Magic Mirror',prompt:'2 + 2 = ?',msg:'Two and Two make Four!',to:4},
       obstacle(1460,'puddle'),star(1780),{x:2180,type:'mirror',start:4,steps:[8],title:'Shimmering Mirror',prompt:'4 + 4 = ?',msg:'Four and Four make Eight!',to:8},
       obstacle(2560,'log'),{x:2980,type:'mirror',start:8,steps:[16],title:'Tall Mirror',prompt:'8 + 8 = ?',msg:'Eight and Eight make Sixteen!',to:16},
       star(3340),obstacle(3680),{x:4100,type:'mirror',start:12,steps:[24],title:'Double Twelve',prompt:'12 + 12 = ?',msg:'Twelve and Twelve make Twenty-four!',to:24},
       obstacle(4460,'puddle'),{x:5000,type:'mirror',start:1,steps:[2,4,8,16,32],title:'Mirror Hall Finale',prompt:'1 → 2 → 4 → 8 → 16 → 32',msg:'One, Two, Four, Eight, Sixteen, Thirty-two!',to:32,finish:true,finale:true}
     ]},
-    {name:'Halfway River Rescue',short:'Halfway River Rescue',range:'5–30',start:10,theme:'river',intro:'Two boats need equal Numberblock crews!',encounters:[
+    {name:'Halfway River Rescue',short:'Halfway River Rescue',range:'5–30',start:17,theme:'river',intro:'Two boats need equal Numberblock crews!',encounters:[
       star(320),obstacle(650,'puddle'),{x:1080,type:'split',whole:10,pieces:[5,5],containers:2,title:'Two Little Boats',prompt:'10 → ⛵ = ⛵',msg:'Five and Five share Ten!',to:5},
       obstacle(1480,'log'),star(1800),{x:2220,type:'split',whole:16,pieces:[8,8],containers:2,title:'River Bend',prompt:'16 → ⛵ = ⛵',msg:'Eight in each boat!',to:8},
       obstacle(2600),{x:3020,type:'split',whole:20,pieces:[10,10],containers:2,title:'Wide Water',prompt:'20 → ⛵ = ⛵',msg:'Ten and Ten make Twenty!',to:10},
       star(3400),obstacle(3740,'puddle'),obstacle(4100,'log'),{x:4680,type:'split',whole:30,pieces:[15,15],containers:2,title:'Rescue Finale',prompt:'30 → ⛵ = ⛵',msg:'Fifteen and Fifteen saved the river!',to:15,finish:true,finale:true}
     ]},
-    {name:"Six's Array Adventure",short:'Array Adventure',range:'6–24',start:6,theme:'array',intro:'Rows and columns make amazing number pictures!',encounters:[
+    {name:"Six's Array Adventure",short:'Array Adventure',range:'6–24',start:18,theme:'array',intro:'Rows and columns make amazing number pictures!',encounters:[
       star(320),obstacle(660),{x:1080,type:'array',total:6,valid:[[2,3],[3,2]],options:[[1,6],[2,3],[3,2]],title:'Turn Six Around',prompt:'▦ = 6',msg:'Two by Three and Three by Two both make Six!'},
       obstacle(1480,'log'),star(1800),{x:2220,type:'array',total:12,valid:[[3,4]],options:[[2,5],[3,4],[4,4]],title:'Build Twelve',prompt:'3 × 4 = ?',msg:'Three rows of Four make Twelve!',to:12},
       obstacle(2600,'puddle'),{x:3020,type:'array',total:20,valid:[[5,4]],options:[[4,4],[5,4],[6,3]],title:'Twenty Tiles',prompt:'5 × 4 = ?',msg:'Five rows of Four make Twenty!',to:20},
       star(3400),obstacle(3740),obstacle(4100,'log'),{x:4680,type:'array',total:24,valid:[[4,6],[3,8]],options:[[4,6],[5,5],[3,8]],requiredCorrect:2,title:'Array Finale',prompt:'▦ = 24  ×2',msg:'Four by Six and Three by Eight make Twenty-four!',to:24,finish:true,finale:true}
     ]},
-    {name:'Times-Table Train',short:'Times-Table Train',range:'20–30',start:5,theme:'train',intro:'Load equal groups into the Number Train!',encounters:[
+    {name:'Times-Table Train',short:'Times-Table Train',range:'19–30',start:19,theme:'train',intro:'Load equal groups into the Number Train!',encounters:[
       star(320),obstacle(660,'log'),{x:1080,type:'train',groups:5,perGroup:4,total:20,options:[16,20,25],title:'Five Carriages',prompt:'5 × 4 = ?',msg:'Five groups of Four make Twenty!',to:20},
       obstacle(1480),star(1800),{x:2220,type:'train',groups:6,perGroup:5,total:30,options:[25,30,35],title:'Six Carriages',prompt:'6 × 5 = ?',msg:'Six groups of Five make Thirty!',to:30},
       obstacle(2600,'puddle'),{x:3020,type:'train',groups:7,perGroup:4,total:28,options:[24,28,32],title:'Seven Carriages',prompt:'7 × 4 = ?',msg:'Seven groups of Four make Twenty-eight!',to:28},
       star(3400),obstacle(3740,'log'),obstacle(4100),{x:4680,type:'train',total:30,perGroup:5,reverse:true,options:[5,6,7],title:'Train Yard Finale',prompt:'30 ÷ 5 = ?',msg:'Six carriages carry Thirty!',to:30,finish:true,finale:true}
     ]},
-    {name:"Zero's Nothingness Dimension",short:'Nothingness Dimension',range:'0–25',start:17,theme:'zero',intro:'Zero can make things vanish—and bring the world back!',encounters:[
+    {name:"Zero's Nothingness Dimension",short:'Nothingness Dimension',range:'0–25',start:20,theme:'zero',intro:'Zero can make things vanish—and bring the world back!',encounters:[
       star(320),obstacle(650),{x:1080,type:'zeroMagic',mode:'vanish',expression:'17 − 17 = 0',answer:0,choices:[0,1,17],title:'Vanish to Zero',prompt:'17 − 17 = ?',msg:'Nothing is left. That is Zero!',to:0},
       obstacle(1480,'puddle'),{x:1900,type:'zeroMagic',mode:'multiply',expression:'8 × 0 = 0',answer:0,choices:[0,8,80],title:'Zero Swirl',prompt:'8 × 0 = ?',msg:'Every group is empty: Zero!',to:0},
       star(2260),obstacle(2600,'log'),{x:3020,type:'zeroMagic',mode:'identity',expression:'25 + 0 = 25',answer:25,choices:[0,20,25],title:'Zero Changes Nothing',prompt:'25 + 0 = ?',msg:'Twenty-five stays Twenty-five!',to:25},
       obstacle(3400),{x:3820,type:'tunnel',equations:[{label:'0 + 1 = 0',correct:false},{label:'0 + 1 = 1',correct:true}],title:'Empty Tunnels',prompt:'✅ ?',msg:'One comes back from Zero!',to:1},
       star(4200),obstacle(4540,'puddle'),{x:5100,type:'zeroMagic',mode:'rebuild',sequence:[0,1,2,5,10,20],title:'Rebuild the World',prompt:'0 → 1 → 2 → 5 → 10 → 20',msg:'From Zero, the whole bright world returns!',to:20,finish:true,finale:true}
     ]},
-    {name:"Aryan's Numberblock Challenge Castle",short:'Aryan’s Challenge Castle',range:'0–100',start:39,theme:'castle',intro:'Five castle rooms lead to the Make One Hundred celebration!',encounters:[
+    {name:"Aryan's Numberblock Challenge Castle",short:'Aryan’s Challenge Castle',range:'0–100',start:21,theme:'castle',intro:'Five castle rooms lead to the Make One Hundred celebration!',encounters:[
       star(300),obstacle(620,'log'),{x:1020,type:'compare',left:47,right:39,question:'bigger',title:'Room One: Blockzilla',prompt:'Choose bigger',msg:'Forty-seven is bigger than Thirty-nine!',to:47},
       obstacle(1400),star(1700),{x:2100,type:'missing',expression:'36 + ? = 50',choices:[12,14,16,24],correct:14,to:50,title:'Room Two: Missing Number',prompt:'36 + ? = 50',msg:'Thirty-six plus Fourteen makes Fifty!'},
       obstacle(2480,'puddle'),{x:2900,type:'build',target:60,pieces:[40,30,20,15,10,5],allowMultipleSolutions:true,to:60,title:'Room Three: Build Portal',prompt:'🧱 → 60',msg:'Sixty opens the third room!'},
@@ -103,7 +103,7 @@
       obstacle(4420,'log'),star(4720),{x:5140,type:'path',current:64,target:100,paths:[{label:'+26',result:90},{label:'+36',result:100},{label:'+46',result:110}],to:100,title:'Room Five: Path to 100',prompt:'64 → 100 ?',msg:'Sixty-four plus Thirty-six makes One Hundred!'},
       obstacle(5520,'puddle'),obstacle(5880),{x:6500,type:'build',target:100,pieces:[50,50,80,20,{value:100,character:25,label:'25 × 4'},{value:100,character:10,label:'10 × 10'}],allowMultipleSolutions:true,to:100,title:'FINAL: MAKE 100',prompt:'🧱 → 100',msg:'You made One Hundred and completed Aryan’s Challenge Castle!',finish:true,finale:true,grandFinale:true}
     ]},
-    {name:'Balancing Bridge',short:'Balancing Bridge',range:'1–18',start:1,theme:'balance',intro:'The bridges move when the two sides are different!',encounters:[
+    {name:'Balancing Bridge',short:'Balancing Bridge',range:'1–22',start:22,theme:'balance',intro:'The bridges move when the two sides are different!',encounters:[
       star(260),{x:620,type:'balance',target:1,fixedSide:[],available:[1],tutorial:true,title:'Try the Bridge',prompt:'1 = ?',msg:'One and One are the same. Balanced!'},
       obstacle(980,'log'),star(1260),{x:1640,type:'balance',target:15,fixedSide:[],available:[10,5,4,3,2],allowMultipleSolutions:true,title:'Bridge 1',prompt:'15 = ?',msg:'Both sides make Fifteen. Balanced!'},
       obstacle(2020,'puddle'),{x:2420,type:'balance',target:12,fixedSide:[],available:[7,6,5,3,2,1],allowMultipleSolutions:true,title:'Bridge 2',prompt:'12 = ?',msg:'Different Numberblocks can balance Twelve!'},
