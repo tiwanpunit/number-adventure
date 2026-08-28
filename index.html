@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-title" content="Number Adventure" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
   <title>Number Adventure</title>
 </head>
 <body>
@@ -68,6 +68,17 @@
         <div id="answerButtons" class="answer-buttons"></div>
       </section>
 
+      <section id="missionOverlay" class="mission-overlay hidden" aria-live="polite" aria-modal="true" role="dialog">
+        <div id="missionCard" class="mission-card">
+          <div id="missionMascot" class="mission-mascot" aria-hidden="true"></div>
+          <h2 id="missionTitle"></h2>
+          <p id="missionPrompt" class="mission-prompt"></p>
+          <div id="missionEquation" class="mission-equation" aria-live="polite"></div>
+          <div id="missionPlay" class="mission-play"></div>
+          <div id="missionActions" class="mission-actions"></div>
+        </div>
+      </section>
+
       <div class="controls">
         <button id="jumpBtn" class="control-btn jump">⬆ Jump</button>
         <button id="goBtn" class="control-btn go">Go ➜</button>
@@ -102,6 +113,6 @@
       </div>
     </section>
   </main>
-  <script src="game.js?v=10"></script>
+  <script src="game.js?v=11"></script>
 </body>
 </html>
